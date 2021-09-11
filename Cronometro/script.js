@@ -1,6 +1,8 @@
 let btnIniciar = document.getElementById("iniciar");
+let btnPausar = document.getElementById("pausar");
 
 let cronometro = document.getElementById("timer");
+
 let hh = 0;
 let mm = 0;
 let ss = 0;
@@ -11,11 +13,13 @@ let int = "";
 
 function iniciar() {
   int = setInterval(timer, tempo);
-  btnIniciar.style.visibility = "hidden";
+  btnIniciar.style.display = "none";
+  btnPausar.style.display = "inline";
 }
 function pausar() {
   clearInterval(int);
-  btnIniciar.style.visibility = "initial";
+  btnIniciar.style.display = "inline";
+  btnPausar.style.display = "none";
 }
 function zerar() {
   clearInterval(int);
