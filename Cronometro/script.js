@@ -29,6 +29,8 @@ function zerar() {
   centz = 0;
   cronometro.innerText = "00:00:00:00";
   btnIniciar.style.visibility = "initial";
+  btnIniciar.style.display = "inline";
+  btnPausar.style.display = "none";
 }
 function timer() {
   centz++;
